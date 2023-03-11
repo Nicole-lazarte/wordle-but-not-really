@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <title>Wordle</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="navigation">
+            <div class="title" >Wordle</div>
+
+            <div class="buttons">
+                <button id="Dark_Mode">&#9681</button>
+                <button id="Hint_icon">&#63</button>
+                <button id="Instructions">&#9432</button>
+            </div>
+            
+        </div>
+
+        <div class = "container">
+        <div class="left_side">
+            <div id = "img" > <img src = "https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif" alt = 'congrats'></div>
+        <div id="game"></div>
+        
+        <button id="startover_button" > Start Over</button>
+         </div>
+
+         <div class="right_side" id = "information">
+            <h2>How To Play</h2>
+        <ol class="information_list">
+            <li >Start typing. The letters will appear in the boxes</li>
+            <li >Remove letters with Backspace</li>
+            <li >Hit Enter/Return to submit an answer</li>
+            <li >Letters with green background are in the right spot</li>
+            <li >Letters with yellow background exist in the word, but are in the wrong spots</li>
+            <li >Letters with gray background do not exist in the word</li>
+            <li >If you need a hint, click the ? icon</li>
+        </ol>
+
+    </div>
+        </div>
+        <div id = "wrong"> </div>
+        <div id = "hint" > </div>
+        <div class = "footer">    
+          &copy Nicole Lazarte
+        </div>
+        <script src="wordle.js" ></script>
+    </body>
+</html>
