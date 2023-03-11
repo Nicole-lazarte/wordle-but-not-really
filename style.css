@@ -1,0 +1,254 @@
+:root {
+    --default: #121213;
+    --empty: #787c7f;
+    --wrong: #c8b653;
+    --right: #6ca965;
+    --light: #ffffff;
+    --grey : #f2f2f2;
+    --dark: #000000;
+    --text: #000000;
+
+}
+
+
+
+body,
+html {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--light);
+  transition: background-color 0.3s ease-in-out;
+}
+
+body.dark,
+html.dark {
+  background-color: var(--dark);
+  color:var(--light);
+}
+
+.navigation {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--grey);
+    color:var(--default);
+    height: 10vh;
+    border-bottom: var(--empty) 2px solid; 
+    transition: background-color 0.3s ease-in-out;
+
+}
+.navigation .title {
+  
+  font-size: 36px;
+  padding-left: 1%;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  margin-right: 430px;
+}
+
+.navigation .buttons {
+  display: flex;
+  justify-content: right
+}
+
+.navigation .buttons button {
+  border: none;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  justify-content: right;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navigation.dark{
+    background-color: var(--default);
+    color:var(--light);
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+}
+
+.left_side{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+}
+.right_side{
+  display: none;
+  flex: 1;
+  flex-direction: column;
+  border-left: var(--empty) solix 1px;
+}
+
+.information_list {
+  list-style-type: circle;
+  padding-left: 0;
+}
+
+.information_list li {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+
+
+.winnerGif {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+.hidden {
+  display: none;
+}
+
+
+#hint{
+  display: block;
+  flex: 1;
+  text-align: center;
+  bottom: 0;
+  background-color: #e4eaeb;
+  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+  
+}
+#wrong{
+  display: block ;
+  flex: 1;
+  text-align: center;
+  bottom: 0;
+  background-color: rgb(255, 77, 0);
+  width: 100%;
+  
+}
+.right_side{
+  border-left: #5b5b5b;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: var(--grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: var(--default) 2px solid; 
+  font-size: 18px;
+  color:var(--empty);
+  transition: background-color 0.3s ease-in-out;
+
+}
+
+.dark-mode .footer {
+  background-color: var(--default);
+  color: var(--light);
+}
+
+.dark-mode .buttons button {
+  background-color: var(--default);
+  color: var(--light);
+}
+
+/* Start Over Button */
+#startover_button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--right);;
+    color: var(--default);;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding-bottom: 10px;
+
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5rem;
+    width: 100%;
+}
+#img{
+  display: none;
+  margin : 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(4, auto);
+}
+.box {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--empty);
+    margin: 4px;
+    color: var(--empty);
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+}
+
+.box.empty {
+    background: var(--empty);
+    color: #f2f2f2;
+}
+
+.box.wrong {
+    background: var(--wrong);
+    color: #f2f2f2;
+}
+
+.box.right {
+    background: var(--right);
+    color: #f2f2f2;
+}
+
+
+
+.winner-gif {
+    align-items: center;
+}
+
+.animated {
+  animation: flip 0.5s ease;
+}
+
+@keyframes flip {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
